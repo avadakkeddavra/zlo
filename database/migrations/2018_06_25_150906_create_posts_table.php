@@ -15,8 +15,8 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('cat_id');
-            $table->integer('user_id');
+            $table->integer('cat_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->integer('likes');
             $table->integer('views');
             $table->float('latitude');
@@ -28,8 +28,8 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('cat_id')->references('id')->on('categories');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('cat_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
