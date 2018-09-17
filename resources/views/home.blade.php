@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <example-component :test='{"name":"fucks"}'></example-component>
+    <header-component></header-component>
+    <posts-component :posts="{{$posts}}"></posts-component>
 @endsection

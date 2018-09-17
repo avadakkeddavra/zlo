@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/post/{post}', 'PostsController@single')->name('post.single');
+Route::get('/posts/create','PostsController@create')->name('post.create');

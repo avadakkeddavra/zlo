@@ -12,10 +12,20 @@
     "devDependencies": {
         "axios": "^0.17",
         "bootstrap-sass": "^3.3.7",
+        "callback-loader": "^0.2.4",
         "cross-env": "^5.1",
+        "file-loader": "^1.1.11",
         "jquery": "^3.2",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
+        "url-loader": "^1.0.1",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "google-maps": "^3.3.0",
+        "masonry-layout": "^4.2.1",
+        "materialize-css": "^1.0.0-rc.2",
+        "vue-ckeditor": "^1.0.0",
+        "vue-icons": "^2.0.0"
     }
 }

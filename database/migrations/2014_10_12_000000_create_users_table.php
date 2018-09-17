@@ -18,12 +18,12 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email',191)->unique();
             $table->string('password');
-            $table->integer('role_id');
-            $table->text('address');
-            $table->float('latitude');
-            $table->float('longitude');
-            $table->string('phone');
-            $table->integer('city_id');
+            $table->integer('role_id')->nullable();
+            $table->text('address')->nullable();
+            $table->float('latitude')->nullable();
+            $table->float('longitude')->nullable();
+            $table->string('phone')->nullable();
+            $table->integer('city_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

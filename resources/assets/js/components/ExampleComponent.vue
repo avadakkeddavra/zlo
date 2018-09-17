@@ -12,10 +12,17 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
+
+    import RegisterComponent from './RegisterComponent.vue';
+
     export default {
+        components:{
+          'register-component':RegisterComponent,
+        },
         mounted() {
             console.log(this.test)
         },
